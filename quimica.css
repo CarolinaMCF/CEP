@@ -1,0 +1,20 @@
+* {margin: 0; padding: 0;}
+
+.cabeçalho {
+    background-color: #E6E6FA; 
+    color:black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.imagem-cabeçalho {
+    width: 9%;
+}
+
+.lista-item {
+    display: inline-block;
+    margin: 0 16px; padding: 24px 0; font-size: 24px;
+
+}
