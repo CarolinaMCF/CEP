@@ -20,7 +20,7 @@
 }
 
 .projeto {
-    background-image: linear-gradient(#B0C4DE, #F0FFFF);
+    background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
     display: flex;
     justify-content: center; 
