@@ -49,8 +49,10 @@
 
 .estudante-div {
     text-align: center;
-    display: grid; 
-    grid-template: 33.33% 33.33% 33.33%;
+    display: inline-block;
+    margin-left: 290px;
+    margin-bottom: 50px; 
+    
     
 }
 
