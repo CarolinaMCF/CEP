@@ -24,6 +24,11 @@
     display: none;
 }
 
+.cabeçalho__botao:checked ~ .lista {
+    display: block;
+
+}
+
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
