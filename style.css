@@ -20,6 +20,10 @@
     margin: 0 16px; padding: 24px 0; font-size: 24px;
 }
 
+.lista {
+    display: none;
+}
+
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
