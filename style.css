@@ -10,11 +10,6 @@
     position: relative;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-}
-
 .imagem-cabeçalho {
     width: 9%;
 }
