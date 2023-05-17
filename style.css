@@ -13,9 +13,6 @@
 .container {
     display: flex;
     align-items: center;
-    margin: 0 16px; 
-    padding: 24px 0; 
-    font-size: 24px;
 }
 
 .imagem-cabeçalho {
