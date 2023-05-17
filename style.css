@@ -18,9 +18,10 @@
     margin: 0 16px; padding: 24px 0; font-size: 24px;
 }
 
-.lista {
+.lista {0
     display: none;
     position: absolute;
+    top: 100%;
 }
 
 .cabeçalho__botao:checked ~ .lista {
