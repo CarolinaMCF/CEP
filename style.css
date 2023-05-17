@@ -28,6 +28,11 @@
 
 }
 
+.lista-materias__titulo, lista-materias__item {
+    padding: 1em;
+    background-color: white;
+}
+
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
