@@ -18,7 +18,7 @@
     margin: 0 16px; padding: 24px 0; font-size: 24px;
 }
 
-.lista__materias {
+.lista-materias {
     display: none;
     position: absolute;
 }
