@@ -28,7 +28,8 @@
 
 }
 
-.lista-materias__titulo, lista-materias__item {
+.lista-materias__titulo, 
+.lista-materias__item {
     padding: 1em;
     background-color: white;
 }
