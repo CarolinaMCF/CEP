@@ -13,7 +13,9 @@
 .container {
     display: inline-block;
     align-items: center;
-    padding: 1em;
+    margin: 0 16px; 
+    padding: 24px 0; 
+    font-size: 24px;
 }
 
 .imagem-cabeçalho {
