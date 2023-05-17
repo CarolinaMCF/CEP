@@ -39,6 +39,7 @@
 }
 
 .lista-materias__item {
+    text-decoration: none;
     color: black;
 }
 
