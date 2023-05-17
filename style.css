@@ -34,6 +34,10 @@
     background-color: white;
 }
 
+.lista-materias__titulo{
+    color: #4682B4;
+}
+
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
