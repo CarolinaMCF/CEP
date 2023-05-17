@@ -11,8 +11,9 @@
 }
 
 .container {
-    display: inline-block;
+    display: flex;
     align-items: center;
+    padding: 1em;
 }
 
 .imagem-cabeçalho {
