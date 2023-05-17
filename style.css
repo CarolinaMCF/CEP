@@ -38,6 +38,10 @@
     text-transform: uppercase;
 }
 
+.cabeçalho__botao{
+    display: none;
+}
+
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
     color: black;
