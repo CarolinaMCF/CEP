@@ -30,21 +30,14 @@
 
 }
 
-.lista-materias__titulo, 
 .lista-materias__item {
     padding: 1em;
     background-color: white;
-}
-
-.lista-materias__titulo{
-    color: #4682B4;
-}
-
-.lista-materias__item {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
 }
+
 
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF); 
