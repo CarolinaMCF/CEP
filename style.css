@@ -23,7 +23,7 @@
     position: absolute;
 }
 
-.cabeçalho__botao:checked ~ .lista {
+.cabeçalho__botao:checked ~ .lista-materias {
     display: block;
 
 }
