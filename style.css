@@ -41,6 +41,7 @@
 .lista-materias__item {
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .projeto {
