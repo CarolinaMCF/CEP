@@ -27,7 +27,6 @@
 
 .cabeçalho__botao:checked ~ .lista-materias {
     display: block;
-
 }
 
 .lista-materias__item {
