@@ -100,12 +100,13 @@
     <img class="rodape-imagem" src="ceplogo.png" alt="logo do Colégio">
 
 </footer>
-<title>Formulário HTML</title>
+<head>
+    <title>Formulário HTML</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <form class="formulario" method="post"> 
+    <form action="exibir-dados.php" class="formulario" method="post"> 
         <p> Envie uma mensagem preenchendo o formulário abaixo</p>
         
         <div class="field">
@@ -134,26 +135,29 @@
 
         <input type="submit" name="acao" value="Enviar">
     </form>
-    <?php
-    if (isset($_POST["acao"])){
-        $nome=$_POST["nome"];
-        $telefone=$_POST["telefone"];
-        $email=$_POST["email"];
-        $radio=$_POST["novidades"];
-        $msg=$_POST["mensagem"];
+    <?php 
 
-        echo "<p>Olá, ".$nome."</p>";
-        echo "<p>Seu email é: ".$email."</p>";
-        echo "<p>Seu telefone é: ".$telefone."</p>";
-        if ($radio=="sim"){
-            echo "<p>Você escolheu receber nossas novidades</p>";
-        }elseif ($radio=="nao") {
-            echo "<p>Você escolheu NÃO receber nossas novidades</p>";
-        }
-        echo "<p>Sua mensagem é:<br/>".$msg."</p>";
-    }
+if (isset($_POST["acao"])){ 
+
+   $nome=$_POST["nome"]; 
+   $telefone=$_POST["telefone"]; 
+   $email=$_POST["email"]; 
+   $radio=$_POST["novidades"]; 
+   $msg=$_POST["mensagem"]; 
+
+   echo "<p>Olá, ".$nome."</p>"; echo "<p>Seu email é: ".$email."</p>"; 
+
+   echo "<p>Seu telefone é: ".$telefone."</p>"; 
+
+   if ($radio=="sim"){ 
+      echo "<p>Você escolheu receber nossas novidades</p>"; 
+   }
+   elseif ($radio=="nao") { 
+      echo "<p>Você escolheu NÃO receber nossas novidades</p>"; 
+   } 
+   echo "<p>Sua mensagem é:<br/>".$msg."</p>"; 
+} 
+
 ?>
-</body>
-</html>
 </body>
 </html>
