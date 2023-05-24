@@ -99,6 +99,7 @@
     width: 200px;
     padding: 30px;
     display:inline-block;
+    text-align:center;
 }
 .formulario p{
     width: 100%;
