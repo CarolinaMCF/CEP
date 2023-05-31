@@ -12,14 +12,66 @@
     <img class="imagem-cabeçalho" src="./ceplogo.png" alt="logo do Colégio"> 
     
     <h1>Robótica - 2ºi</h1>
-
-
-    <ul class="lista">
-        <li class="lista-item"><a href= "index.html"> Projeto </a></li>
-        <li class="lista-item"><a href= "index.html"> Equipe </a></li>
-        <a href="biotec.html"> Biotecnologia </a>
-        <a href="empreendedorismo.html"> Empreendedorismo </a>
-        <a href="programaçao.html"> Programação </a>
-        <a href="robotica.html"> Robótica </a>
+    
+    <div class="container">
+        <ul class="lista">
+            <li class="lista-item"><a href="index.html">Projeto </a></li>
+            <li class="lista-item"><a href="index.html"> Equipe </a></li>
+        </ul> 
+        
+        <input type="checkbox" id="menu" class="cabeçalho__botao">
+        <label for="menu">
+            
+            <span class="disciplinas"> Disciplinas </span>
+        </label> 
+    
+        <ul class="lista-materias">
+                
+            <li class="lista-materias__item">
+                <a href="biotec.html"> Biotecnologia </a>
+            </li>
+    
+            <li class="lista-materias__item">
+                <a href="empreendedorismo.html"> Empreendedorismo </a>
+            </li>
+    
+            <li class="lista-materias__item">
+                <a href="programaçao.html"> Programação </a>
+            </li>
+    
+            <li class="lista-materias__item">
+                <a href="robotica.html"> Robótica </a>
+            </li>
+        
     </ul>   
+    </div>
 </header>
+
+<form action="exibir-dados.php" class="formulario" method="post"> 
+    <p> Envie uma mensagem preenchendo o formulário abaixo</p>
+    
+    <div class="field">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Seu E-Mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+    </div>        
+
+    <div class="field">
+        <label for="mensagem">Sua mensagem:</label>
+        <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" required></textarea>
+    </div>
+
+    <input type="submit" name="acao" value="Enviar">
+</form> 
+
+<footer class="rodape">
+    <img class="rodape-imagem" src="ceplogo.png" alt="logo do Colégio">
+
+</footer>
+
+</body>
+</html>
