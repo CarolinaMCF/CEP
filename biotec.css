@@ -15,12 +15,102 @@
 
 .lista-item {
     display: inline-block;
-    margin: 0 16px; padding: 24px 0; font-size: 24px;
-
+    margin: 0 16px; 
+    padding: 24px 0; 
+    font-size: 24px;
 }
 
+.lista-materias {
+    display: none;
+    position: absolute;
+    text-align: center;
+}
 
+ul a {
+    text-decoration: none;
+    color: black;
+}
 
+.cabeçalho__botao:checked ~ .lista-materias {
+    display: block;
+}
 
+.lista-materias__item {
+    padding: 1em;
+    background-color: white;
+    text-transform: uppercase;
+}
 
+.cabeçalho__botao{
+    display: none;
+}
 
+.rodape {
+    background-color:#d0f7d0;
+    text-align: center; 
+}
+
+.rodape-imagem {
+    height: 80px;
+    padding: 12px 0; 
+}
+
+.formulario{
+    width: auto;
+    padding: 30px;
+}
+
+.formulario p{
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.field{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.field label, 
+.field span{
+    padding-left: 10px;
+    font-size: 24px;
+    display: block;
+    width: 100%;
+}
+
+.radiobox label{
+    width: auto;
+    display: inline-block;
+}
+
+input[type=text],
+input[type=email],
+textarea{
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+textarea{
+    line-height: 20px;
+    padding: 10px;
+    height: 90px;
+    resize: none;
+}
+
+input[type=submit]{
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
