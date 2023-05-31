@@ -3,11 +3,19 @@
 .cabeçalho {
     background-color: #B0C4DE; 
     color:black;
-    display: flex;
+    display: flex; 
+    align-items: center;                             
     justify-content: space-around;
-    align-items: center;
     padding: 24px 0;
-    position: relative;
+}
+
+.titulo {
+    font-size: 24px;
+    padding: 24px 0;
+}
+
+.disciplinas {
+    font-size: 20px;
 }
 
 .imagem-cabeçalho {
@@ -15,14 +23,21 @@
 }
 
 .lista-item {
+    display: inline-block;
     margin: 0 16px; 
     padding: 24px 0; 
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .lista-materias {
     display: none;
     position: absolute;
+    text-align: center;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
 }
 
 .cabeçalho__botao:checked ~ .lista-materias {
@@ -32,8 +47,6 @@
 .lista-materias__item {
     padding: 1em;
     background-color: white;
-    color: black;
-    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -42,7 +55,7 @@
 }
 
 .projeto {
-    background-image: linear-gradient(#B0C4DE, #F0FFFF); 
+    background-image: linear-gradient(#B0C4DE, #F0FFFF);
     color: black;
     display: flex;
     justify-content: center; 
@@ -72,9 +85,9 @@
 .estudante-div {
     text-align: center;
     display: inline-block;
-    margin-left: 290px;
-    margin-bottom: 50px; 
- 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 95px;
 }
 
 .estudante-texto { 
@@ -95,20 +108,22 @@
     height: 80px;
     padding: 12px 0; 
 }
+
 .formulario{
-    width: 200px;
-    padding:100px;
-    display:inline-block;
-    text-align:center;
+    width: auto;
+    padding: 30px;
 }
+
 .formulario p{
     width: 100%;
     font-size: 1.5em;
 }
+
 .field{
     width: 100%;
     margin: 15px 0;
 }
+
 .field label, 
 .field span{
     padding-left: 10px;
@@ -116,10 +131,12 @@
     display: block;
     width: 100%;
 }
+
 .radiobox label{
     width: auto;
     display: inline-block;
 }
+
 input[type=text],
 input[type=email],
 textarea{
@@ -131,12 +148,14 @@ textarea{
     border: 1px solid #ccc;
     outline: none;
 }
+
 textarea{
     line-height: 20px;
     padding: 10px;
     height: 90px;
     resize: none;
 }
+
 input[type=submit]{
     display: block;
     background-color: #ccc;
