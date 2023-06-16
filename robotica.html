@@ -57,46 +57,49 @@
         <h2 class="projeto1-titulo">Interruptor do Led</h2>
 
         <p class="projeto1-texto"><strong>Material utilizado:</strong>
-            - Jumpers
-            - Arduino
-            - Protoboard
-            - Push button
-            - Resistores
-            <strong>Conceitos importantes:</strong>
+            <br>- Jumpers
+            <br>- Arduino
+            <br>- Protoboard
+            <br>- Push button
+            <br>- Resistores
+
+            <strong>Conceitos importantes:</strong><br>
             Funcionamento do push button.
-            <strong>Montagem esquemática:</strong>
-            1- Conectar um jumper no GND do arduino ao segmento negativo do protoboard.
-            2- Conectar um jumper na porta 13 do arduino ao conector I2 do protoboard.
-            3- Conectar um jumper na porta 12 do arduino ao conector D10 do protoboard.
-            4- Conectar um led nos conectores F2 (ânodo) e F3 (cátodo).
-            5- Conectar um jumper no outro GND do arduino ao segmento negativo inferior do protoboard.
-            6- Conectar um jumper na porta 5V do arduino ao segmento positivo do protoboard.
-            7- Conectar um push button nos conectores E10, E12, F10 e F12 do protoboard.
-            8- Conectar um jumper no segmento negativo ao conector A12 do protoboard.
-            9- Conectar um resistor de 220 ohms no segmento negativo e no conector J3 do protoboard.
-            10- Conectar um resistor de 10000 ohms no segmento negativo inferior e no conector B10 do protoboard.
-            <strong>Programação:</strong> 
-            int botao = 0;
 
-             void setup()
-             {
-            pinMode(13, OUTPUT);
-            pinMode(12, OUTPUT);
-            pinMode(12, INPUT);
+            <br><strong>Montagem esquemática:</strong>
+            <br>1- Conectar um jumper no GND do arduino ao segmento negativo do protoboard.
+            <br>2- Conectar um jumper na porta 13 do arduino ao conector I2 do protoboard.
+            <br>3- Conectar um jumper na porta 12 do arduino ao conector D10 do protoboard.
+            <br>4- Conectar um led nos conectores F2 (ânodo) e F3 (cátodo).
+            <br>5- Conectar um jumper no outro GND do arduino ao segmento negativo inferior do protoboard.
+            <br>6- Conectar um jumper na porta 5V do arduino ao segmento positivo do protoboard.
+            <br>7- Conectar um push button nos conectores E10, E12, F10 e F12 do protoboard.
+            <br>8- Conectar um jumper no segmento negativo ao conector A12 do protoboard.
+            <br>9- Conectar um resistor de 220 ohms no segmento negativo e no conector J3 do protoboard.
+            <br>10- Conectar um resistor de 10000 ohms no segmento negativo inferior e no conector B10 do protoboard.
+            
+            <br><strong>Programação:</strong> 
+            <br>int botao = 0;
 
-            digitalWrite(13, LOW);
-            digitalWrite(12, LOW);
-            }
+            <br>void setup()
+            <br>{
+            <br>pinMode(13, OUTPUT);
+            <br>pinMode(12, OUTPUT);
+            <br>pinMode(12, INPUT);
 
-            void loop()
-            {
-            botao = digitalRead(12);
-            if (botao == HIGH) {
-            digitalWrite(13, HIGH);
-            }
-            digitalWrite(13, LOW);
-            delay(10);
-            }
+            <br>digitalWrite(13, LOW);
+            <br>digitalWrite(12, LOW);
+            <br>}
+
+            <br>void loop()
+            <br>{
+            <br>botao = digitalRead(12);
+            <br>if (botao == HIGH) {
+            <br>digitalWrite(13, HIGH);
+            <br>}
+            <br>digitalWrite(13, LOW);
+            <br>delay(10);
+            <br>}
         
     </div>
 </section>
