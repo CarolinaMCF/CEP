@@ -135,3 +135,26 @@ input[type=submit]{
     width: 60%;
     align-items: center;
 }
+
+.projeto1 {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.projeto1-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.projeto1-titulo {
+    padding: 24px 0;
+}
+
+.projeto1-imagem {
+    width: 25%;
+    margin-left: 650px;
+    margin-top: -100px;
+}
