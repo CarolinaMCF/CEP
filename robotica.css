@@ -133,5 +133,5 @@ input[type=submit]{
 
 .informacoes-imagem {
     width: 60%;
-    text-align: center;
+    align-items: center;
 }
