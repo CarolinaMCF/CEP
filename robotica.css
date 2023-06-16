@@ -156,6 +156,5 @@ input[type=submit]{
 
 .projeto1-imagem {
     width: 40%;
-    margin-left: 650px;
-    margin-top: 50px;
+    align-items: center;
 }
