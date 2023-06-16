@@ -113,3 +113,25 @@ input[type=submit]{
     text-align: center;
     border-radius: 15px;
 }
+
+.informacoes {
+    background-image: linear-gradient(#B0C4DE, #F0FFFF);
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.informacoes-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.informacoes-titulo {
+    padding: 24px 0;
+}
+
+.informacoes-imagem {
+    width: 25%;
+}
