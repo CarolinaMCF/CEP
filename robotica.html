@@ -52,30 +52,51 @@
         <img class="informacoes-imagem" src="Tabela Robótica.jpg" alt="Tabela de Robótica">
     </div>
 </section>
-<section class="projeto3">
-    <div class="projeto3-div">
-        <h2 class="projeto3-titulo">Buzzer</h2>
+<section class="projeto1">
+    <div class="projeto1-div">
+        <h2 class="projeto1-titulo">Interruptor do Led</h2>
 
-        <p class="projeto3-texto">O elemento HTML <strong>&lt;title&lt; </strong>(Elemento HTML Título) define o título do documento, mostrado na barra de título de um navegador ou na aba da página.
-            <br>Exemplo: &lt;title&lt;Título incrível&lt;title&lt;
-        </p>
+        <p class="projeto1-texto"><strong>Material utilizado:</strong>
+            - Jumpers
+            - Arduino
+            - Protoboard
+            - Push button
+            - Resistores
+            <strong>Conceitos importantes:</strong>
+            Funcionamento do push button.
+            <strong>Montagem esquemática:</strong>
+            1- Conectar um jumper no GND do arduino ao segmento negativo do protoboard.
+            2- Conectar um jumper na porta 13 do arduino ao conector I2 do protoboard.
+            3- Conectar um jumper na porta 12 do arduino ao conector D10 do protoboard.
+            4- Conectar um led nos conectores F2 (ânodo) e F3 (cátodo).
+            5- Conectar um jumper no outro GND do arduino ao segmento negativo inferior do protoboard.
+            6- Conectar um jumper na porta 5V do arduino ao segmento positivo do protoboard.
+            7- Conectar um push button nos conectores E10, E12, F10 e F12 do protoboard.
+            8- Conectar um jumper no segmento negativo ao conector A12 do protoboard.
+            9- Conectar um resistor de 220 ohms no segmento negativo e no conector J3 do protoboard.
+            10- Conectar um resistor de 10000 ohms no segmento negativo inferior e no conector B10 do protoboard.
+            <strong>Programação:</strong> 
+            int botao = 0;
 
-        <p><br><strong>Meta tags</strong> são elementos (comandos em HTML) que você cria para descrever o conteúdo de uma página para os mecanismos de busca. 
-            <br>Exemplo: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"
-        </p>
-         
-        <p><br>O elemento HTML <strong> &lt;head &lt; </strong>providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
-            <br>Exemplo:&lt;head&lt;
-        <br>&lt;meta charset="UTF-8"&lt;
-        <br>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&lt;
-        <br>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&lt;
-        <br>&lt;title>Colégio Estadual do Paraná&lt;title&lt;
-        <br>&lt;head&lt;
-        </p>
+             void setup()
+             {
+            pinMode(13, OUTPUT);
+            pinMode(12, OUTPUT);
+            pinMode(12, INPUT);
 
-        <p><br>O elemento HTML <strong>Div</strong> define uma divisão ou seção em um documento HTML. 
-            <br>Exemplo:&lt;div class="estudante-div">&lt;
-        </p>
+            digitalWrite(13, LOW);
+            digitalWrite(12, LOW);
+            }
+
+            void loop()
+            {
+            botao = digitalRead(12);
+            if (botao == HIGH) {
+            digitalWrite(13, HIGH);
+            }
+            digitalWrite(13, LOW);
+            delay(10);
+            }
         
     </div>
 </section>
