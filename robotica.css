@@ -158,3 +158,25 @@ input[type=submit]{
     width: 40%;
     align-items: center;
 }
+
+.projeto2 {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.projeto2-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.projeto2-titulo {
+    padding: 24px 0;
+}
+
+.projeto2-imagem {
+    width: 40%;
+    align-items: center;
+}
