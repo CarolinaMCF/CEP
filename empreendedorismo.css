@@ -132,9 +132,11 @@ input[type=submit]{
 
 .slider img {
     margin: auto;
-    width: 10%;
+    height: 20%;
+    width: 20%;
     vertical-align: top;
 }
+
 
 .slider input {
     display: none;
