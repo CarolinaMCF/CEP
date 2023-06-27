@@ -115,26 +115,62 @@ input[type=submit]{
     border-radius: 15px;
 }
 
-.carrossel__titulo {
-    color: black;
-    background-color: white;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 1em 0 0.5em 0;
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
 }
 
-.swiper-slide img {
-    width: 10%;
+.slider li {
+    list-style: none;
+    position: absolute;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.slider img {
+    margin: auto;
+    height: 20%;
+    width: 20%;
+    vertical-align: top;
+}
+
+
+.slider input {
     display: none;
 }
 
-.swiper-pagination {
-    position: initial;
-    margin: .5em 0;
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
