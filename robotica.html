@@ -154,6 +154,55 @@
     </div>
 </section>
 
+<section class="semaforo">
+    <div class="semaforo-div">
+        <h2 class="semaforo-titulo">Buzzer</h2>
+        <img class="semaforo-imagem" src="Semaforo.jpg" alt="">
+
+        <p class="semaforo-texto"><strong></strong>
+            <br>- Jumpers
+            <br>- Arduino
+            <br>- Protoboard
+            <br>- Buzzer</p>
+            
+            <p><br><strong>Conceitos importantes:</strong> 
+            <br>- Buzzer - transmitir energia em som.
+            <br>- Porta PWM - ~ 3, 5, 6, 9, 10, 11
+            <br>x++       
+            <br>x = x+1
+            <br>x--  
+            <br>x = x-1</p>
+
+            <p><br><strong>Montagem esquemática:</strong>
+            <br>1- Conectar um jumper no GND do arduino ao segmento negativo do protoboard.
+            <br>2- Conectar um jumper na porta 8 do arduino ao conector F15 do protoboard.
+            <br>3- Conectar um jumper no segmento negativo ao conector H10 do protoboard.
+            <br>4- Conectar um Buzzer aos conectores J10 (positivo) e J15 (negativo) do protoboard.</p>
+            
+            <p><br><strong>Programação:</strong> 
+                <br>#define buzzer 8
+
+                <br>void setup()
+                <br>{
+                  <br>pinMode(buzzer, OUTPUT);
+                  <br>noTone(buzzer);
+                  <br>}
+                
+                  <br>void loop()
+                  <br>{
+                    <br>tone(buzzer, 262, 1000);
+                    <br>tone(buzzer, 294, 1000);
+                    <br>tone(buzzer, 330, 1000);
+                    <br>tone(buzzer, 349, 1000);
+                    <br>tone(buzzer, 392, 1000);
+                <br>}
+
+               <p><br><strong>Relato de observação:</strong> Após montar, emitiu som do Buzzer.</p>
+        
+    </div>
+</section>
+
+
 <form class="formulario" method="post" action="https://formspree.io/f/mrgvwoqw"> 
     <p> Envie uma mensagem preenchendo o formulário abaixo</p>
     
