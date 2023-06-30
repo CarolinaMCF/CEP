@@ -201,5 +201,6 @@ input[type=submit]{
 .semaforo-imagem {
     width: 40%;
     align-items: center;
+    padding: 5px 0;
 }
 
