@@ -180,3 +180,25 @@ input[type=submit]{
     width: 40%;
     align-items: center;
 }
+
+.semaforo {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.semaforo-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.semaforo-titulo {
+    padding: 24px 0;
+}
+
+.semaforo-imagem {
+    width: 40%;
+    align-items: center;
+}
