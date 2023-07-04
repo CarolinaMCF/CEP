@@ -140,7 +140,7 @@ input[type=submit]{
     width: calc(var(--total-items) * 100%);
   }
   
-  .redondo {
+  .imagem-slide {
     width: 10%;
   }
   
