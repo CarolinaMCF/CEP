@@ -139,8 +139,8 @@ input[type=submit]{
     width: calc(var(--total-items) * 100%);
   }
   
-  .imagem-slide {
-    width: 2%;
+  .slide-imagem {
+    width: 10%;
   }
   
   .slide-show {
