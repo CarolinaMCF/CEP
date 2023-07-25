@@ -1,6 +1,266 @@
 @media screen and (min-width:720px){
     * {margin: 0; padding: 0;}
 
+    .cabeçalho {
+        background-color: #B0C4DE; 
+        color:black;
+        display: flex; 
+        align-items: center;                             
+        justify-content: space-around;
+        padding: 24px 0;
+    }
+    
+    .titulo {
+        font-size: 24px;
+        padding: 24px 0;
+    }
+    
+    .disciplinas {
+        font-size: 20px;
+    }
+    
+    .imagem-cabeçalho {
+        width: 9%;
+    }
+    
+    .lista-item {
+        display: inline-block;
+        margin: 0 16px; 
+        padding: 24px 0; 
+        font-size: 20px;
+    }
+    
+    .lista-materias {
+        display: none;
+        position: absolute;
+        text-align: center;
+    }
+    
+    ul a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .cabeçalho__botao:checked ~ .lista-materias {
+        display: block;
+    }
+    
+    .lista-materias__item {
+        padding: 1em;
+        background-color: white;
+        text-transform: uppercase;
+    }
+    
+    .cabeçalho__botao{
+        display: none;
+    }
+    
+    .projeto {
+        background-image: linear-gradient(#B0C4DE, #F0FFFF);
+        color: black;
+        padding: 24px 0;
+    }
+    
+    .projeto-texto {
+        padding: 17px 0;
+    }
+    
+    .projeto-div {
+        display: flex; 
+    }
+    
+    .projeto-titulo {
+        padding: 24px 0;
+    }
+    
+    .projeto-imagem {
+        width: 25%;
+    }
+    
+    .estudante-todos {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+    .estudante-imagem {
+        width: 140px;
+    }
+    
+    .estudante-div {
+        text-align: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 95px;
+    }
+    
+    .estudante-texto { 
+        margin-top: 15px;
+    }
+    
+    .estudante-titulo {
+        text-align: center; 
+        padding: 50px 0; 
+    }
+    
+    .rodape {
+        background-color:#B0C4DE;
+        text-align: center; 
+    }
+    
+    .rodape-imagem {
+        height: 80px;
+        padding: 12px 0; 
+    }
+    
+    .formulario{
+        width: auto;
+        padding: 30px;
+    }
+    
+    .formulario p{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    
+    .field{
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .field label, 
+    .field span{
+        padding-left: 10px;
+        font-size: 24px;
+        display: block;
+        width: 100%;
+    }
+    
+    .radiobox label{
+        width: auto;
+        display: inline-block;
+    }
+    
+    input[type=text],
+    input[type=email],
+    textarea{
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+    
+    textarea{
+        line-height: 20px;
+        padding: 10px;
+        height: 90px;
+        resize: none;
+    }
+    
+    input[type=submit]{
+        display: block;
+        background-color: #ccc;
+        height: 35px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 15px;
+    }
+    
+    .banner {
+        background: linear-gradient(#B0C4DE, #F0FFFF);
+        color: var(--branco);
+        text-align: center;
+        padding: 2.5em 2em;
+    }
+    
+    .banner__titulo {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .banner__texto {
+        font-weight: 500;
+        margin: 1em 0;
+    }
+    
+    .banner__pesquisa {
+        background-color: transparent;
+        border: 1px solid var(--branco);
+        color: var(--branco);
+        border-radius: 24px;
+        padding: 1em;
+        width: 25%;
+    }
+    
+    .banner__pesquisa::placeholder {
+        font-family: var(--fonte-principal);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: var(--branco);
+        background: url("../img/Lupa.svg") no-repeat;
+        background-position: 1em;
+    }
+    
+    .carrosel {
+        text-align: center;
+        background-color: #B0C4DE;
+      }
+      
+      .slides-list {
+        /* remove os estilos da lista */
+        list-style-type: none;
+        margin: 10px 0;
+        padding: 0;
+        width: 400%;
+        position: relative;
+        left: 0%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        --selected-item: 0;
+        position: relative;
+        left: calc(var(--selected-item) * -100%);
+        transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        --total-items: 6;
+        width: calc(var(--total-items) * 100%);
+      }
+      
+      .slide-imagem {
+        width: 10%;
+      }
+      
+      .slide-show {
+        overflow: hidden;
+      }
+      
+      .slide-controller:nth-child(1):checked~.slide-show .slides-list {
+        --selected-item: 0;
+      }
+      
+      .slide-controller:nth-child(2):checked~.slide-show .slides-list {
+        --selected-item: 1;
+      }
+      
+      .slide-controller:nth-child(3):checked~.slide-show .slides-list {
+        --selected-item: 2;
+      }
+      
+      .slide-controller:nth-child(4):checked~.slide-show .slides-list {
+        --selected-item: 3;
+      }
+}
+
+@media  and   (min-width: ) {
+    * {margin: 0; padding: 0;}
+
 .cabeçalho {
     background-color: #B0C4DE; 
     color:black;
@@ -58,15 +318,15 @@ ul a {
 .projeto {
     background-image: linear-gradient(#B0C4DE, #F0FFFF);
     color: black;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
     padding: 24px 0;
 }
 
+.projeto-texto {
+    padding: 17px 0;
+}
+
 .projeto-div {
-    width: 90%; 
-    margin-left: 200px;
+    display: flex; 
 }
 
 .projeto-titulo {
@@ -75,8 +335,11 @@ ul a {
 
 .projeto-imagem {
     width: 25%;
-    margin-left: 650px;
-    margin-top: -100px;
+}
+
+.estudante-todos {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .estudante-imagem {
@@ -254,3 +517,4 @@ input[type=submit]{
     --selected-item: 3;
   }
 }
+    
