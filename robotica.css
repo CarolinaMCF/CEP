@@ -203,3 +203,25 @@ input[type=submit]{
     align-items: center;
 }
 
+.semaforofisico {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.semaforofisico-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.semaforofisico-titulo {
+    padding: 24px 0;
+}
+
+.semaforofisico-imagem {
+    width: 40%;
+    align-items: center;
+}
+

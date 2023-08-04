@@ -273,55 +273,51 @@
 <section class="semaforofisico">
     <div class="semaforofisico-div">
         <h2 class="semaforofisico-titulo">1º Projeto: <strong>Semáforo Físico</strong></h2>
-        <img class="semaforofisico-imagem" src="s" alt="Semáforo">
+        <img class="semaforofisico-imagem" src="semaforofisico1.jpg" alt="Semáforo Físico">
 
-        <p class="semaforo-texto"><strong>Material utilizado:</strong>
-            <br>- Jumpers
-            <br>- Arduino
+        <p class="semaforofisico-texto"><strong>Material utilizado:</strong>
+            <br>- Jumpers macho-macho
+            <br>- Arduino Uno
             <br>- Protoboard
             <br>- Buzzer
             <br>- Push button 
-            <br>- Leds 
-            <br>- Resistores</p>
+            <br>- Leds (2 vermelhos, 1 amarelo e 2 verdes)
+            <br>- Resistores de 220 ohms</p>
             
             <p><br><strong>Conceitos importantes:</strong> 
-            <br>- Buzzer - transmitir energia em som.
-            <br>- Funcionamento do push button com os leds.</p>
+            <br>-Controle do semáforo com push button e utilização do buzzer para produzir som.</p>
 
             <p><br><strong>Algoritmo de montagem:</strong>
-            <br>1- Conecte um jumper no GND do Arduino ao segmento negativo superior do Protoboard.
-            <br>2-	Conecte um jumper na porta 5V do Arduino ao segmento positivo inferior do Protoboard.
-            <br>3-	Para o semáforo de carros, conecte os leds das seguintes cores nos respectivos conectores do protoboard: um led vermelho nos conectores H3 (cátodo) e H4 (ânodo); um led amarelo nos conectores H7 (cátodo) e H8 (ânodo) e um led verde nos conectores H11 (cátodo) e H12 (ânodo).
-            <br>4-	Para o semáforo de pedestres, conecte um led vermelho aos conectores H26 (cátodo) e H27 (ânodo) e um led verde aos conectores H29 (cátodo) e H30 (ânodo).
-            <br>5-	Conecte 5 resistores de 100 ohms aos respectivos conectores, ligando os dois lados do protoboard: F4 (terminal 2) e D4 (terminal 1); F8 (terminal 2) e D8 (terminal 1); F12 (terminal 2) e D12 (terminal 1); F27 (terminal 2) e D27 (terminal 1); F30 (terminal 2) e D30 (terminal 1).
-            <br>6-	Conecte um Push Button, ligando os dois lados do Protoboard, aos respectivos conectores: F22 (terminal 1b), F24 (terminal 2b), E22 (terminal 1a) e E24 (terminal 2a).
-            <br>7-	Conecte o terminal 2 de um resistor de 10.000 ohms ao segmento negativo superior do Protoboard e o terminal 1 ao conector J22.
-            <br>8-  Posicione um Buzzer acima do Protoboard e, utilizando um jumper, conecte seu lado negativo ao segmento negativo da placa.
-            <br>9-	Conecte um resistor de 200 ohms, ligando os dois lados do Protoboard, aos conectores F15 (terminal 2) e D15 (terminal 1).
-            <br>10-	Conecte um jumper ao lado positivo do Buzzer e ao conector I15.
-            <br>11-	Conecte 5 jumpers, ligando o segmento negativo superior do Protoboard aos respectivos conectores: 1º jumper – G3; 2º jumper – G7; 3º jumper – G11; 4º jumper – G26; 5º jumper – G29.
-            <br>12-	Com um jumper vermelho, conecte a porta 13 do Arduino ao conector A4 do Protoboard.
-            <br>13-	Com um jumper amarelo, conecte a porta 12 do Arduino ao conector A8 do Protoboard.
-            <br>14-	Com um jumper verde, conecte a porta 11 do Arduino ao conector A12 do Protoboard.
-            <br>15-	Com um jumper turquesa, conecte a porta 10 do Arduino ao conector A15 do 
-            Protoboard.       
-            <br>16-	Com um jumper rosa, conecte a porta 8 do Arduino ao conector A22 do Protoboard.           
-            <br>17-	Com um jumper preto, conecte o segmento positivo inferior do Protoboard ao conector A24.           
-            <br>18-	Com um jumper vermelho, conecte a porta 7 do Arduino ao conector A27 do Protoboard.           
-            <br>19-	Com um jumper verde, conecte a porta 6 do Arduino ao conector A30 do Protoboard, finalizando a montagem do Semáforo.           
+            <br>1-  Conectamos um jumper no GND do Arduino ao segmento negativo superior do Protoboard.
+            <br>2-	Conectamos um jumper na porta 5V do Arduino ao segmento positivo inferior do Protoboard.
+            <br>3-	Para o semáforo de carros, conectamos os leds das seguintes cores nos respectivos conectores do protoboard: um led vermelho nos conectores H27 (cátodo) e H26 (ânodo); um led amarelo nos conectores H22 (cátodo) e H21 (ânodo) e um led verde nos conectores H16 (cátodo) e H17 (ânodo).
+            <br>4-	Para o semáforo de pedestres, conectamos um led vermelho aos conectores H12 (cátodo) e H11 (ânodo) e um led verde aos conectores H8 (cátodo) e H7 (ânodo).
+            <br>5-	Conectamos um jumper no outro GND do Arduino ao segmento negativo inferior do Protoboard.
+            <br>6-  Conectamos 5 resistores de 220 ohms aos respectivos conectores e ao segmento negativo do protoboard: J27, J22, J18, J12 e J8.
+            <br>7-	Conectamos um Push Button, ligando os dois lados do Protoboard, aos respectivos conectores: F3 e F1, D3 e D1.
+            <br>8-  Conectamos um jumper da porta 7 do Arduino ao conector I3 do Protoboard.
+            <br>9-  Conectamos um jumper do segmento positivo ao conector I1 do Protoboard.
+            <br>10- Conectamos um Buzzer aos conectores A27 e A25 do Protoboard.
+            <br>11-	Conectamos um jumper do segmento negativo ao conector D27 do Protoboard.
+            <br>12-	Conectamos um jumper da porta 8 do Arduino ao conector D25 do Protoboard.
+            <br>13-	Conectamos um jumper da porta 13 do Arduino ao conector G26 do Protoboard.
+            <br>14-	Conectamos um jumper da porta 12 do Arduino ao conector G21 do Protoboard.
+            <br>15-	Conectamos um jumper da porta 11 do Arduino ao conector G17 do Protoboard.
+            <br>16-	Conectamos um jumper da porta 10 do Arduino ao conector G11 do Protoboard.
+            <br>17-	Conectamos um jumper da porta 9 do Arduino ao conector G7 do Protoboard, finalizando a montagem do Semáforo.
             </p>
             
-            <img class="semaforo-imagem" src="Semaforo2.jpg" alt="Semáforo">
+            <img class="semaforofisico-imagem" src="semaforofisico2.jpg" alt="Semáforo">
 
             <p><br><strong>Programação:</strong> 
             <br>// Definição das variáveis
-            <br>int botao=8;
+            <br>int botao=7;
             <br>int carrovermelho=13;
             <br>int carroamarelo=12;
             <br>int carroverde=11;
-            <br>int pedestrevermelho=7;
-            <br>int pedestreverde=6;
-            <br>int som=10;
+            <br>int pedestrevermelho=10;
+            <br>int pedestreverde=9;
+            <br>int som=8;
             <br>int start=0;
 
             <br> // Definir se a variável é de entrada (INPUT) ou saída (OUTPUT) 
@@ -379,7 +375,7 @@
 
             <br>}</p>
                 
-         <img class="semaforo-imagem" src="Semaforo4.jpg" alt="Semáforo">
+            <video class="videosemaforo" src="Vídeo Semáforo Robótica.mp4"></video>
 
                <p><br><strong>Relato de observação:</strong> Ao clicarmos no botão, o sinal do pedestre é acionado e o Buzzer emite som.</p>
         
