@@ -223,5 +223,6 @@ input[type=submit]{
 .semaforofisico-imagem {
     width: 40%;
     align-items: center;
+    padding: 24px 0;
 }
 
