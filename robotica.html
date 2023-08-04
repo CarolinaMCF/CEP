@@ -409,35 +409,34 @@
                         <br>7- Conectamos um jumper em outro GND do Arduino ao conector J16 do Protoboard.</p>
                         
                         <p><br><strong>Programação:</strong> 
-                        <br>#include <Arduino.h> //INCLUSÃO DE BIBLIOTECA
-                        <br>#include <TM1637Display.h> //INCLUSÃO DE BIBLIOTECA
+                        <br>#include &&<Arduino.h>&& 
+                        <br>#include &&<TM1637Display.h>&& 
                              
-                        <br>#define CLK 2 //PINO DIGITAL UTILIZADO PELO CLK
-                        <br>#define DIO 3 //PINO DIGITAL UTILIZADO PELO DIO
-                        <br>#define TEST_DELAY 2000 //A QUANTIDADE DE TEMPO (EM MILISSEGUNDOS) ENTRE OS TESTES
+                        <br>#define CLK 2 
+                        <br>#define DIO 3 
+                        <br>#define TEST_DELAY 2000 
                              
-                        <br>TM1637Display display(CLK, DIO); //PPASSA OS PARÂMETROS PARA UMA FUNÇÃO DA BIBLIOTECA TM1637Display
+                        <br>TM1637Display display(CLK, DIO); 
                              
-                        <br>const int pinoBotao = 4; //PINO DIGITAL UTILIZADO PELO BOTÃO
+                        <br>const int pinoBotao = 4; 
                              
-                        <br>int contador = 0; //VARIÁVEL DO TIPO INTEIRA
-                        <br>int estadoPress = 0; //VARIÁVEL DO TIPO INTEIRA
+                        <br>int contador = 0; 
+                        <br>int estadoPress = 0; 
                              
                         <br>void setup(){
-                            <br>pinMode(pinoBotao,INPUT_PULLUP); //DEFINE O PINO COMO ENTRADA / "_PULLUP" É PARA ATIVAR O RESISTOR INTERNO
-                            <br>//DO ARDUINO PARA GARANTIR QUE NÃO EXISTA FLUTUAÇÃO ENTRE 0 (LOW) E 1 (HIGH)
-                            <br>display.setBrightness(0x0f); //DEFINE A INTESIDADE LUMINOSA DOS SEGMENTOS DO DISPLAY
+                            <br>pinMode(pinoBotao,INPUT_PULLUP);
+                            <br>display.setBrightness(0x0f); 
                         <br>}
                              
                         <br>void loop(){
-                            <br>display.showNumberDec(contador,false); //IMPRIME NO DISPLAY A CONTAGEM ATUAL
-                            <br>if(digitalRead(pinoBotao)== LOW){ //SE A LEITURA DO PINO FOR IGUAL A LOW, FAZ
-                            <br>if(estadoPress == 0){ //SE estadoPress FOR IGUAL A 0, FAZ
-                            <br>contador++; //INCREMENTA VARIÁVEL EM +1
-                            <br>estadoPress=1; //VARIÁVEL RECEBE 1
+                            <br>display.showNumberDec(contador,false); 
+                            <br>if(digitalRead(pinoBotao)== LOW){ 
+                            <br>if(estadoPress == 0){ 
+                            <br>contador++; 
+                            <br>estadoPress=1; 
                         <br>}
-                            <br>}else{ //SENÃO, FAZ
-                            <br>estadoPress=0; //VARIÁVEL RECEBE 0
+                            <br>}else{ 
+                            <br>estadoPress=0;
                         <br>}
                     <br> }
             
