@@ -230,3 +230,25 @@ input[type=submit]{
     padding: 24px 0; 
 }
 
+.display {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.display-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.display-titulo {
+    padding: 24px 0;
+}
+
+.display-imagem {
+    width: 40%;
+    align-items: center;
+    padding: 24px 0;
+}
