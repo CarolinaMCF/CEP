@@ -3,12 +3,10 @@
 
     .cabeçalho {
         background-color: #B0C4DE;
-        width: auto;
         color:black;
         display: flex; 
         align-items: center;                             
         justify-content: space-around;
-        padding: 24px 0;
     }
     
     .titulo {
@@ -263,12 +261,10 @@
 
 .cabeçalho {
     background-color: #B0C4DE; 
-    width: auto;
     color:black;
     display: flex; 
     align-items: center;                             
     justify-content: space-around;
-    padding: 24px 0;
 }
 
 .titulo {
