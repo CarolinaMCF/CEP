@@ -252,3 +252,26 @@ input[type=submit]{
     align-items: center;
     padding: 24px 0;
 }
+
+.potenciometro {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.potenciometro-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.potenciometro-titulo {
+    padding: 24px 0;
+}
+
+.potenciometro-imagem {
+    width: 40%;
+    align-items: center;
+    padding: 24px 0;
+}
