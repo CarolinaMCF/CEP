@@ -8,6 +8,8 @@
         align-items: center;                             
         justify-content: space-around;
         padding: 24px 0;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .titulo {
