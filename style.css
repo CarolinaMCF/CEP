@@ -257,7 +257,7 @@
       }
 }
 
-@media  and   (min-width: ) {
+@media  and   (min-width: 100px) {
     * {margin: 0; padding: 0;}
 
 .cabeçalho {
