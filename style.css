@@ -3,8 +3,6 @@
 
     .cabeçalho {
         background-color: #B0C4DE;
-        margin-left: auto;
-        margin-right: auto; 
         color:black;
         display: flex; 
         align-items: center;                             
