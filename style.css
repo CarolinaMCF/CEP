@@ -1,4 +1,4 @@
-@media screen and (min-width: 300px){
+@media screen and (min-width: 180px){
     * {margin: 0; padding: 0;}
 
     .cabeçalho {
@@ -8,7 +8,6 @@
         align-items: center;                             
         justify-content: space-around;
         padding: 24px 0;
-        width: 100%;
     }
     
     .titulo {
