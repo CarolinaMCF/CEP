@@ -263,6 +263,7 @@
 
 .cabeçalho {
     background-color: #B0C4DE; 
+    width: auto;
     color:black;
     display: flex; 
     align-items: center;                             
