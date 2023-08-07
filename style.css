@@ -45,7 +45,8 @@
         display: block;
     }
     
-    .lista-materias__item {
+    .lista-materias__item a{
+        text-decoration: none;
         padding: 1em;
         background-color: white;
         text-transform: uppercase;
