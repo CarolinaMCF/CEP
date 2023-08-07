@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px){
+@media screen and (min-width: 180px){
     * {margin: 0; padding: 0;}
 
     .cabeçalho {
@@ -257,7 +257,7 @@
       }
 }
 
-@media  and   (min-width: 100px) {
+@media  and   (min-width: ) {
     * {margin: 0; padding: 0;}
 
 .cabeçalho {
