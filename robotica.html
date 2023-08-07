@@ -490,49 +490,98 @@
                     <img class="ledrgb-imagem" src="ledrgb1.jpg" alt="Led RGB">
             
                     <p class="ledrgb-texto"><strong>Material utilizado:</strong>
-                        <br>- Jumpers
-                        <br>- Arduino
+                        <br>- Jumpers macho-macho
+                        <br>- Arduino Uno
                         <br>- Protoboard
-                        <br>- Buzzer
-                        <br>- Push button 
-                        <br>- Leds 
-                        <br>- Resistores</p>
+                        <br>- Potenciômetro
+                        <br>- Resistor de 220 ohms
+                        <br>- Led RGB </p>
                         
                         <p><br><strong>Conceitos importantes:</strong> 
-                        <br>- Buzzer - transmitir energia em som.
-                        <br>- Funcionamento do push button com os leds.</p>
+                        <br>- O Led RGB possibilita a emissão de um amplo espectro de luz visível através das cores primárias vermelho, verde e azul (red, green, blue).
+                        <br>- Funcionamento do potenciômetro com o Led RGB.</p>
             
                         <p><br><strong>Algoritmo de montagem:</strong>
-                        <br>1- Conecte um jumper no GND do Arduino ao segmento negativo superior do Protoboard.
-                        <br>2-	Conecte um jumper na porta 5V do Arduino ao segmento positivo inferior do Protoboard.
-                        <br>3-	Para o semáforo de carros, conecte os leds das seguintes cores nos respectivos conectores do protoboard: um led vermelho nos conectores H3 (cátodo) e H4 (ânodo); um led amarelo nos conectores H7 (cátodo) e H8 (ânodo) e um led verde nos conectores H11 (cátodo) e H12 (ânodo).
-                        <br>4-	Para o semáforo de pedestres, conecte um led vermelho aos conectores H26 (cátodo) e H27 (ânodo) e um led verde aos conectores H29 (cátodo) e H30 (ânodo).
-                        <br>5-	Conecte 5 resistores de 100 ohms aos respectivos conectores, ligando os dois lados do protoboard: F4 (terminal 2) e D4 (terminal 1); F8 (terminal 2) e D8 (terminal 1); F12 (terminal 2) e D12 (terminal 1); F27 (terminal 2) e D27 (terminal 1); F30 (terminal 2) e D30 (terminal 1).
-                        <br>6-	Conecte um Push Button, ligando os dois lados do Protoboard, aos respectivos conectores: F22 (terminal 1b), F24 (terminal 2b), E22 (terminal 1a) e E24 (terminal 2a).
-                        <br>7-	Conecte o terminal 2 de um resistor de 10.000 ohms ao segmento negativo superior do Protoboard e o terminal 1 ao conector J22.
-                        <br>8-  Posicione um Buzzer acima do Protoboard e, utilizando um jumper, conecte seu lado negativo ao segmento negativo da placa.
-                        <br>9-	Conecte um resistor de 200 ohms, ligando os dois lados do Protoboard, aos conectores F15 (terminal 2) e D15 (terminal 1).
-                        <br>10-	Conecte um jumper ao lado positivo do Buzzer e ao conector I15.
-                        <br>11-	Conecte 5 jumpers, ligando o segmento negativo superior do Protoboard aos respectivos conectores: 1º jumper – G3; 2º jumper – G7; 3º jumper – G11; 4º jumper – G26; 5º jumper – G29.
-                        <br>12-	Com um jumper vermelho, conecte a porta 13 do Arduino ao conector A4 do Protoboard.
-                        <br>13-	Com um jumper amarelo, conecte a porta 12 do Arduino ao conector A8 do Protoboard.
-                        <br>14-	Com um jumper verde, conecte a porta 11 do Arduino ao conector A12 do Protoboard.
-                        <br>15-	Com um jumper turquesa, conecte a porta 10 do Arduino ao conector A15 do 
-                        Protoboard.       
-                        <br>16-	Com um jumper rosa, conecte a porta 8 do Arduino ao conector A22 do Protoboard.           
-                        <br>17-	Com um jumper preto, conecte o segmento positivo inferior do Protoboard ao conector A24.           
-                        <br>18-	Com um jumper vermelho, conecte a porta 7 do Arduino ao conector A27 do Protoboard.           
-                        <br>19-	Com um jumper verde, conecte a porta 6 do Arduino ao conector A30 do Protoboard, finalizando a montagem do Semáforo.           
-                        </p>
-                        
-                        <img class="semaforo-imagem" src="Semaforo2.jpg" alt="Semáforo">
+                        <br>1- Posicionamos o Led RGB e o Potenciômetro no Protoboard.
+                            2- Conectamos um dos terminais do resistor no terminal negativo do LED RGB, e o outro terminal na parte inferior do Protoboard.
+                            3- Conectamos um jumper ao GND do Arduino e ao segmento negativo do Protoboard.
+                            4- Conectamos um jumper ao 5V do Arduino e ao segmento positivo do Protoboard.
+                            5- Conectamos um jumper no primeiro terminal do Potenciômetro ao segmento positivo do Protoboard.
+                            6- Conectamos um jumper no último terminal do Potenciômetro ao segmento negativo do Protoboard.
+                            7- Conectamos um jumper no terminal central do Potenciômetro à porta A0 do Arduino.
+                            8- Conectamos 3 jumpers às portas 2, 3 e 4 do Arduino ao Led RGB.
+                            9- Conectamos um jumper do resistor ao segmento positivo do Protoboard.</p>
+
+                        <img class="semaforo-imagem" src="ledrgb2.jpg" alt="Led RGB">
             
                         <p><br><strong>Programação:</strong> 
-                        <br></p>
-                            
-                     <img class="semaforo-imagem" src="Semaforo4.jpg" alt="Semáforo">
+                        <br>// Define o pino analógico A0 para o potenciômetro. //
+                        <br>int Pin_pot = A0;
+                        <br>// Variável que armazenará os dados do potenciômetro. //
+                        <br>int Pot = 0;
+                        <br>// Define o pino digital 2 para o LED Vermelho. //
+                        <br>int Led_R = 2;
+                        <br>// Define o pino digital 3 para o LED Verde. //
+                        <br>int Led_G = 3;
+                        <br>// Define o pino digital 4 para o LED Azul. //
+                        <br>int Led_B = 4;
+                        <br>// Variáveis para controle dos LEDs. //
+                        <br>int ligar;
+                        <br>int desligar;
+                        <br>void setup() {
+                            <br>// Define o pino Led_R como SAÍDA. //
+                            <br>pinMode(Led_R, OUTPUT);
+                            <br>// Define o pino Led_G como SAÍDA. //
+                            <br>pinMode(Led_G, OUTPUT);
+                            <br>// Define o pino Led_B como SAÍDA. //
+                            <br>pinMode(Led_B, OUTPUT);
+                            <br>// Rotina que verifica o tipo de LED RGB utilizado e //
+                            <br>// Adequa os parâmetros para ligar e desligar o LED. //
+                            <br>if (modelo[0] != ‘C’) {
+                                <br>ligar = 0;
+                                <br>desligar = 1;
+                                <br>} else {
+                                    <br>ligar = 1;
+                                    <br>desligar = 0;
+                                    <br>}
+                                    <br>// Inicia com os LEDs desligados. //
+                                    <br>digitalWrite(Led_R, desligar);
+                                    <br>digitalWrite(Led_G, desligar);
+                                    <br>digitalWrite(Led_B, desligar);
+                                    <br>}
+                                    <br>void loop() {
+                                        <br>// Armazena os dados do potenciômetro na variável Pot. //
+                                        <br>Pot = analogRead(Pin_pot);
+                                        <br>// Se Pot estiver entre 0 e 341, faça... //
+                                        <br>if (Pot >= 0 && Pot <= 341) {
+                                            <br>// Ligue o LED Vermelho. //
+                                            <br>digitalWrite(Led_R, ligar);
+                                            <br>// Senão... //
+                                            <br>} else {
+                                                <br>// Desligue o LED Vermelho. //
+                                                <br>digitalWrite(Led_R, desligar);
+                                                <br>}
+                                                <br>// Se Pot estiver entre 342 e 682, faça... //
+                                                <br>if (Pot >= 342 && Pot <= 682) {
+                                                    <br>// Ligue o LED Verde. //
+                                                    <br>digitalWrite(Led_G, ligar);
+                                                    <br>// Senão... //
+                                                    <br>} else {
+                                                        <br>// Desligue o LED Verde. //
+                                                        <br>digitalWrite(Led_G, desligar);
+                                                        <br>}
+                                                        <br>// Se Pot estiver entre 686 e 1023, faça... //
+                                                        <br>if (Pot >= 683 && Pot <= 1023) {
+                                                            <br>// Ligue o LED Azul. //
+                                                            <br>digitalWrite(Led_B, ligar);
+                                                            <br>// Senão... //
+                                                            <br>} else {
+                                                                <br>// Desligue o LED Azul. //
+                                                                <br>digitalWrite(Led_B, desligar);
+                                                                <br>}
+                                                                <br>}</p>
             
-                           <p><br><strong>Relato de observação:</strong> Ao clicarmos no botão, o sinal do pedestre é acionado e o Buzzer emite som.</p>
+                           <p><br><strong>Relato de observação:</strong> O Potenciômetro controla as cores do Led RGB.</p>
                     
                 </div>
             </section>

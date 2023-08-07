@@ -275,3 +275,26 @@ input[type=submit]{
     align-items: center;
     padding: 24px 0;
 }
+
+.ledrgb {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.ledrgb-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.ledrgb-titulo {
+    padding: 24px 0;
+}
+
+.ledrgb-imagem {
+    width: 40%;
+    align-items: center;
+    padding: 24px 0;
+}
