@@ -123,7 +123,7 @@
     }
     
     .field{
-        width: 100%;
+        width: 300px;
         margin: 15px 0;
     }
     
@@ -383,7 +383,7 @@ ul a {
 }
 
 .field{
-    width: 100%;
+    width: 300px;
     margin: 15px 0;
 }
 
