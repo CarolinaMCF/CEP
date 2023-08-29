@@ -185,13 +185,22 @@ input[type=submit]{
   .teclado {
     background-color: white;
     display: grid; gap: 10px; padding: 10px;
-    grid-template-columns: repeat (3, 1fr);}
+    grid-template-columns: repeat (3, 1fr);
+}
 
-  .tecla {background-color: #E6E6FA; color: black; padding: 45px}
+  .tecla {background-color: #E6E6FA; 
+    color: black; 
+    padding: 45px
+}
 
-  .tecla-active {background-color: white; color: black; outline: none;}
+  .tecla-active {background-color: white; 
+    color: black; 
+    outline: none;
+}
 
-  .tecla : focus {outline: none; box-shadow: 1px 1px 10px #D3D3D3}
+  .tecla : focus {outline: none; 
+    box-shadow: 1px 1px 10px #D3D3D3
+}
 
   .tecla.ativa : focus, .tecla-active: focus {
     box-shadow: 3px 3px 0 #D3D3D3;
