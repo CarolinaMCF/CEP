@@ -1,1 +1,1 @@
-alert('Hello you!')
+document.querySelector ('tecla_pom')
