@@ -189,18 +189,21 @@ input[type=submit]{
     grid-template-columns: repeat (3,1fr);
 }
 
-  .tecla {background-color: #E6E6FA; 
+  .tecla {
+    background-color: #E6E6FA; 
     color: black; 
-    padding: 45px
+    padding: 45px;
 }
 
-  .tecla-active {background-color: white; 
+  .tecla-active {
+    background-color: white; 
     color: black; 
     outline: none;
 }
 
-  .tecla : focus {outline: none; 
-    box-shadow: 1px 1px 10px #D3D3D3
+  .tecla : focus {
+    outline: none; 
+    box-shadow: 1px 1px 10px #D3D3D3;
 }
 
   .tecla.ativa : focus, .tecla-active: focus {
