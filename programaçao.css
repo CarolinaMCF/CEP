@@ -181,3 +181,23 @@ input[type=submit]{
   .slide-controller:nth-child(4):checked~.slide-show .slides-list {
     --selected-item: 3;
   }
+
+  .teclado {
+    background-color: #A020F0;
+    display: grid; gap: 10px; padding: 10px;
+    grid-template-columns: repeat (3, 1fr);}
+
+  .tecla {background-color: white; color: black;}
+
+  .tecla-active {background-color: white; color: black; outline: none;}
+
+  .tecla : focus {outline: none; box-shadow: 1px 1px 10px #D3D3D3}
+
+  .tecla.ativa : focus, .tecla-active: focus {
+    box-shadow: 3px 3px 0 #D3D3D3;
+  }
+
+
+
+
+  
