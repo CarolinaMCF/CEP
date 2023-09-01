@@ -585,7 +585,145 @@
                     
                 </div>
             </section>
-  
+
+    
+            <section class="central">
+                <div class="central-div">
+                    <h2 class="central-titulo">2º Projeto: <strong>Central de Segurança</strong></h2>
+                    <img class="central-imagem" src="Central1.jpg" alt="Central de Segurança">
+            
+                    <p class="central-texto"><strong>Material utilizado:</strong>
+                        <br>- Jumpers
+                        <br>- Arduino Uno
+                        <br>- Protoboard
+                        <br>- 4 Push buttons
+                        <br>- 1 Led verde
+                        <br>- 1 Led vermelho
+                        <br>- Sensor LDR
+                        <br>- Resistores: 2 de 10.000 ohms e 2 de 220 ohms
+                        <br>- Buzzer </p>
+                        
+                        <p><br><strong>Conceitos importantes:</strong> 
+                        <br>- Funcionamento do sensor LDR, dos botões, do Buzzer e dos leds.
+                        
+                        <p><br><strong>Montagem esquemática:</strong>
+                        <br>1- Conecte um jumper no GND do Arduino ao segmento negativo inferior do Protoboard.
+                        <br>2- Conecte um jumper na porta 5V do Arduino ao segmento positivo inferior do Protoboard.
+                        <br>3- Conecte um jumper do segmento negativo inferior do Protoboard ao segmento negativo superior do Protoboard.
+                        <br>4- Conecte um jumper do segmento positivo inferior do Protoboard ao segmento positivo superior do Protoboard.
+                        <br>5- Conecte quatro Push Buttons, ligando os dois lados do Protoboard, aos respectivos conectores: 
+                        <br>- 1º botão - F2 (terminal 1b), F4 (terminal 2b), E2 (terminal 1a) e E4 (terminal 2a); 
+                        <br>- 2º botão – F5 (terminal 1b), F7 (terminal 2b), E5 (terminal 1a) e E7 (terminal 2a); 
+                        <br>- 3º botão – F8 (terminal 1b), F10 (terminal 2b), E8 (terminal 1a) e E10 (terminal 2a); 
+                        <br>- 4º botão – F13 (terminal 1b), F15 (terminal 2b), E13 (terminal 1a) e E15 (terminal 2a).
+                        <br>6- Conecte 4 jumpers, ligando o segmento negativo superior do Protoboard aos respectivos conectores: 1º jumper – J2; 2º jumper – J5; 3º jumper – J8; 4º jumper – J13.
+                        <br>7- Conecte um jumper da porta 13 do Arduino ao conector D4 do Protoboard.
+                        <br>8- Conecte um jumper da porta 12 do Arduino ao conector D7 do Protoboard.
+                        <br>9- Conecte um jumper da porta 11 do Arduino ao conector D10 do Protoboard.
+                        <br>10- Conecte um jumper da porta 10 do Arduino ao conector D15 do Protoboard.
+                        <br>11- Posicione um Buzzer acima do Protoboard e, utilizando um jumper, conecte seu lado negativo ao segmento negativo da placa.
+                        <br>12- Conecte um jumper ao lado positivo do Buzzer e ao conector G17 do Protoboard.
+                        <br>13- Conecte um resistor de 10.000 ohms, ligando os dois lados do Protoboard, aos conectores F17 (terminal 2) e D17 (terminal 1).
+                        <br>14- Conecte um jumper da porta 8 do Arduino ao conector C17 do Protoboard.
+                        <br>15- Conecte o sensor LDR aos conectores G22 (terminal 1) e H22 (terminal 2).
+                        <br>16- Conecte um jumper da porta A0 do Arduino ao conector I22 do Protoboard.
+                        <br>17- Conecte um resistor de 10.000 ohms, ligando os dois lados do Protoboard, aos conectores F22 (terminal 2) e D22 (terminal 1).
+                        <br>18- Conecte um jumper do segmento negativo do Protoboard ao conector C22.
+                        <br>19- Conecte um led verde aos conectores H25 (cátodo) e H26 (ânodo).
+                        <br>20- Conecte um led vermelho aos conectores H28 (cátodo) e H29 (ânodo).
+                        <br>21- Conecte um jumper do segmento negativo do Protoboard ao conector I25.
+                        <br>22- Conecte um jumper do segmento negativo do Protoboard ao conector I28.
+                        <br>23- Conecte um resistor de 220 ohms, ligando os dois lados do Protoboard, aos conectores G26 (terminal 2) e E26 (terminal 1).
+                        <br>24- Conecte um resistor de 220 ohms, ligando os dois lados do Protoboard, aos conectores G29 (terminal 2) e E29 (terminal 1).
+                        <br>25- Conecte um jumper da porta 7 do Arduino ao conector D26 do Protoboard.
+                        <br>26- Conecte um jumper da porta 6 do Arduino ao conector D29 do Protoboard, finalizando a montagem da Central de Segurança.
+                        </p>
+                        
+                        <p><br><strong>Programação:</strong> 
+                        <br>String senha = "123123"; // Definição de senha
+                        <br>String digitado = "";
+                        <br>int t = 0;
+                        <br>int buzzerPin = 8; // Pino do buzzer
+                        <br>int ldrPin = A0;  // Pino do sensor LDR
+                        <br>int validationButtonPin = 10; // Pino do botão de validação
+                        <br>int greenLedPin = 7; // Pino do LED verde
+                        <br>int redLedPin = 6; // Pino do LED vermelho
+                        <br>bool alarmArmed = false;
+                        
+                        <br>void setup() {
+                            <br>pinMode(7, OUTPUT);
+                            <br>pinMode(6, OUTPUT);
+                            <br>pinMode(13, INPUT_PULLUP);
+                            <br>pinMode(12, INPUT_PULLUP);
+                            <br>pinMode(11, INPUT_PULLUP);
+                            <br>pinMode(buzzerPin, OUTPUT);
+                            <br>pinMode(ldrPin, INPUT);
+                            <br>pinMode(validationButtonPin, INPUT_PULLUP);
+                            <br>pinMode(greenLedPin, OUTPUT);
+                            <br>pinMode(redLedPin, OUTPUT);
+                            <br>Serial.begin(9600);
+                            <br>}
+                        
+                            <br>void loop() {
+                                <br>int lightValue = analogRead(ldrPin);
+                          
+                                <br>if (!alarmArmed && lightValue < 100) {
+                                    <br>armAlarm();
+                                    <br>}
+                          
+                                    <br>if (alarmArmed) {
+                                        <br>checkButtons();
+                                        <br>}
+                          
+                                    <br>if (digitalRead(validationButtonPin) == LOW && alarmArmed) {
+                                        <br>validatePassword();
+                                    <br>}
+                                <br>}
+                        
+                            <br>void armAlarm() {
+                                <br>digitalWrite(greenLedPin, LOW);
+                                <br>digitalWrite(redLedPin, HIGH);
+                                <br>alarmArmed = true;
+                                <br>t = 0;
+                                <br>digitado = "";
+                                <br>noTone(buzzerPin); // Desliga o buzzer
+                            <br>}
+                        
+                            <br>void checkButtons() {
+                                <br>if (t < senha.length()) {
+                                <br>if (digitalRead(13) == LOW) {digitado += "1"; delay(100); t++;}
+                                <br>if (digitalRead(12) == LOW) {digitado += "2"; delay(100); t++;}
+                                <br>if (digitalRead(11) == LOW) {digitado += "3"; delay(100); t++;}
+                                <br>}
+                            <br>}
+                        
+                            <br>void validatePassword() {
+                                <br>if (t == senha.length()) {
+                                <br>if (digitado == senha) {
+                                <br>digitalWrite(greenLedPin, HIGH);
+                                <br>digitalWrite(redLedPin, LOW); // Desliga o LED vermelho
+                            <br>} else {
+                                <br>digitalWrite(redLedPin, HIGH);
+                            <br>playIncorrectSound();
+                        <br>}
+                            <br>t = 0;
+                            <br>digitado = "";
+                            <br>}
+                        <br>}
+                        
+                            <br>void playIncorrectSound() {
+                                <br>tone(buzzerPin, 1000); 
+                                <br>delay(100); 
+                                <br>noTone(buzzerPin); // Desliga o buzzer
+                        <br>}
+                        
+            
+                           <p><br><strong>Relato de observação:</strong> Ao digitarmos a senha corretamente, o led verde acende. Se digitarmos a senha incorreta, o led vermelho acende e o Buzzer emite som.</p>
+                    
+                </div>
+            </section>
+
+           
 
 
 <form class="formulario" method="post" action="https://formspree.io/f/mrgvwoqw"> 

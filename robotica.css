@@ -298,3 +298,26 @@ input[type=submit]{
     align-items: center;
     padding: 24px 0;
 }
+
+.central {
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 24px 0;
+}
+
+.central-div {
+    width: 90%; 
+    margin-left: 200px;
+}
+
+.central-titulo {
+    padding: 24px 0;
+}
+
+.central-imagem {
+    width: 40%;
+    align-items: center;
+    padding: 24px 0;
+}
