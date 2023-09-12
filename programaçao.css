@@ -184,8 +184,8 @@ input[type=submit]{
 
   .teclado {
     background-color: white;
-    gap: 10px; 
     display: grid;
+    gap: 10px; 
     grid-template-columns: repeat (3,1fr);
 }
 
