@@ -2,13 +2,13 @@ function TocaSomPom (idElementoAudio) {
     document.querySelector(idElementoAudio).play();
 }
 
-const ListaDeSons = document.querySelectorAll ('.tecla');
+const lista = document.querySelectorAll ('.tecla');
 
 let Contador = 0;
 
-while (Contador < ListaDeSons.length) {
+while (Contador < lista.length) {
     const tecla = lista[contador];
-    const classe = ListaDeSons[Contador].classList[1];
+    const classe = lista[Contador].classList[1];
     //console.log(classe);
 
     const idSom = `#som_${classe}`;
