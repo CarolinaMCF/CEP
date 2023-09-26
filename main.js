@@ -24,6 +24,7 @@ while (Contador < lista.length) {
 
     tecla.onkeydown = function() {
         tecla.classList.add('ativa');
+        console.log(evento);
     } 
 
     tecla.onkeyup = function(){
