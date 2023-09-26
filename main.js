@@ -14,7 +14,7 @@ while (Contador < ListaDeSons.length) {
 //console.log(idSom);
 
     ListaDeSons[Contador].onclick = function() {
-    tocar(idSom);
+    TocaSomPom(idSom);
 }
 
     Contador = Contador + 1;
