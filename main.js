@@ -24,7 +24,7 @@ while (Contador < lista.length) {
 
     tecla.onkeydown = function() {
         tecla.classList.add('ativa');
-    }
+    } 
 
     tecla.onkeyup = function(){
         tecla.classList.remove('ativa');
