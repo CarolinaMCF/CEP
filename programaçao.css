@@ -194,19 +194,21 @@ input[type=submit]{
     color: black; 
     padding: 45px;
 }
-
-  .tecla-active {
-    background-color: white; 
+.tecla.ativa,
+  .tecla:active {
+    background-color: rgb(255, 0, 0); 
     color: black; 
     outline: none;
 }
 
-  .tecla : focus {
+  .tecla:focus,
+  .tecla:focus
+   {
     outline: none; 
     box-shadow: 1px 1px 10px #D3D3D3;
 }
 
-  .tecla.ativa : focus, .tecla-active: focus {
+  .tecla.ativa:focus, .tecla-active:focus {
     box-shadow: 3px 3px 0 #D3D3D3;
   }
 
