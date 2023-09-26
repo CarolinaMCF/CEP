@@ -196,7 +196,7 @@ input[type=submit]{
 }
 .tecla.ativa,
   .tecla:active {
-    background-color: rgb(255, 0, 0); 
+    background-color: rgb(185, 233, 252); 
     color: black; 
     outline: none;
 }
@@ -205,7 +205,7 @@ input[type=submit]{
   .tecla:focus
    {
     outline: none; 
-    box-shadow: 1px 1px 10px #9c1414;
+    box-shadow: 1px 1px 10px #c1a9f8;
 }
 
   .tecla.ativa:focus, .tecla-active:focus {
