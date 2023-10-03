@@ -1,4 +1,4 @@
-function TocaSomPom (idElementoAudio) {
+function tocar (idElementoAudio) {
     document.querySelector(idElementoAudio).play();
 }
 
@@ -15,7 +15,7 @@ while (Contador < lista.length) {
     //console.log(idSom);
 
     lista[Contador].onclick = function() {
-    TocaSomPom(idSom);
+    tocar(idSom);
 }
 
     Contador = Contador + 1;
