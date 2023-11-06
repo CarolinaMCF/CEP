@@ -57,8 +57,8 @@ function texto(){
   }
 
   function number(){
-    var num = document.getElementById("num2");
-    var num2 = document.getElementById("num3");
+    var num = document.getElementById("num");
+    var num2 = document.getElementById("num2");
     var rev1 = num.value;
     var rev2 = num2.value;
     var float1 = parseFloat (rev1 - rev2);
