@@ -239,7 +239,7 @@ input[type=submit]{
   
   .input{
     border-radius:10px;
-    color: white;
+    color: black;
     inline-size:1cm;
     text-align:center;
    }
