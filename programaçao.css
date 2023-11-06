@@ -211,7 +211,30 @@ input[type=submit]{
   .tecla.ativa:focus, .tecla-active:focus {
     box-shadow: 3px 3px 0 #D3D3D3;
   }
-
+  
+  .bloco{
+    background:gray;
+  text-align:center;
+    width:300px;
+    border-style:double;
+    border-radius:5px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    background-position:absolute;
+    display:table;
+    vertical-align:absolute;
+  }
+  
+  .input{
+    border-radius:10px;
+    color:red;
+    inline-size:1cm;
+    text-align:center;
+   }
+  #sinal{
+    color:white;
+  }
 
 
 
