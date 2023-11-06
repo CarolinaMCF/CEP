@@ -57,11 +57,11 @@ function texto(){
   }
 
   function number(){
-    var num = document.getElementById("num2");
-    var num2 = document.getElementById("num3");
+    var num = document.getElementById("num");
+    var num2 = document.getElementById("num2");
     var rev1 = num.value;
     var rev2 = num2.value;
-    var float1 = parseFloat (num2 - num3);
+    var float1 = parseFloat (num - num2);
     console.log(float1)
     var mostrar = document.getElementById("show3");
     var show = "o resultado da subtração é " + float1;mostrar.innerHTML = show
