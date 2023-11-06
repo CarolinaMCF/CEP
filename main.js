@@ -38,7 +38,7 @@ function texto(){
     var juncao = parseFloat(conversao * conv2 );
     var juncao2=parseFloat(conv2 * conversao);
     var body = document.getElementById("show");
-    var mostrar = " o resultado da multiplicação é " + juncao2;body.innerHTML = mostrar  
+    var mostrar = "O resultado da multiplicação é " + juncao2;body.innerHTML = mostrar  
   }
   
   function numero(){
@@ -49,18 +49,18 @@ function texto(){
     var resultado = parseFloat(conv / conv2);
     var resul2 = parseFloat(conv2 / conv);
     var mostrar = document.getElementById("show2");
-    var ver = "o resultado da divisao é " + resultado;mostrar.innerHTML = ver
+    var ver = "O resultado da divisão é " + resultado;mostrar.innerHTML = ver
   }
 
   function number(){
     var num = document.getElementById("num");
-    var num2 = document.getElementById("num2");
+    var num2 = document.getElementById("num3");
     var rev1 = num.value;
-    var rev2 = num2.value;
+    var rev2 = num3.value;
     var float1 = parseFloat(rev1 - rev2);
     console.log(float1)
     var mostrar = document.getElementById("show3");
-    var show = "o resultado da subtração é " + float1;mostrar.innerHTML = show
+    var show = "O resultado da subtração é " + float1;mostrar.innerHTML = show
   }
 
   function result(){
@@ -69,5 +69,5 @@ function texto(){
     var resultado = parseFloat(conversao);
     var final = resultado * resultado;
     var log = document.getElementById("show5");
-    var end = "o resultado da potência é " + final;log.innerHTML = end
+    var end = "O resultado da potência é " + final;log.innerHTML = end
   }
