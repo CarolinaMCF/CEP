@@ -31,16 +31,12 @@ for (let Contador = 0; Contador < lista.length; Contador++){
 }
 
 function texto(){
-    //elemento pego do id//
     var num = document.getElementById("num");
     var num2 = document.getElementById("num2");
-    //convertendo para " int "//
     var conversao = num.value;
     var conv2 = num2.value
-    //onde é feito a conta//
     var juncao = parseFloat(conversao * conv2 );
     var juncao2=parseFloat(conv2 * conversao);
-    //mostrar na pagina//
     var body = document.getElementById("show");
     var mostrar = " o resultado da multiplicação é " + juncao2;body.innerHTML = mostrar  
   }
@@ -61,7 +57,7 @@ function texto(){
     var num2 = document.getElementById("num2");
     var rev1 = num.value;
     var rev2 = num2.value;
-    var float1 = parseFloat (rev1);
+    var float1 = parseFloat(rev1 - rev2);
     console.log(float1)
     var mostrar = document.getElementById("show3");
     var show = "o resultado da subtração é " + float1;mostrar.innerHTML = show
