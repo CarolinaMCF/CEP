@@ -36,7 +36,7 @@ function texto(){
     var conversao = num.value;
     var conv2 = num2.value
     var juncao = parseFloat(conversao * conv2 );
-    var juncao2=parseFloat(conv2 * conversao);
+    var juncao2= parseFloat(conv2 * conversao);
     var body = document.getElementById("show");
     var mostrar = "O resultado da multiplicação é " + juncao2;body.innerHTML = mostrar  
   }
@@ -58,7 +58,6 @@ function texto(){
     var rev1 = num.value;
     var rev2 = num3.value;
     var float1 = parseFloat(rev1 - rev2);
-    console.log(float1)
     var mostrar = document.getElementById("show3");
     var show = "O resultado da subtração é " + float1;mostrar.innerHTML = show
   }
