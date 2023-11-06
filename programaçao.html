@@ -206,38 +206,38 @@
   </script>
 </div>
 
-<div class="divisão">
-    <style type="text/css">
-      .multiplica {
-        margin: 30px;
-        padding: 24px 0;
-      }
-    </style>
-    
-    <form>
-      1º número: <input type="text" 
-      id="firstNumber" /><br>
-      2º número: <input type="text" 
-      id="secondNumber" /><br>
-      <input type="button" onClick="divideBy()" 
-      Value="Dividir" /><br>
-    </form>
-    
-    <p>O resultado é: <br>
-     <span id = "result"></span>
-    </p>
-    
-    <script>
-      function divideBy()
-      {
-        num1 = document.getElementById(
-          "firstNumber").value;
-        num2 = document.getElementById(
-          "secondNumber").value;
-        document.getElementById(
-          "result").innerHTML = num1 / num2;
-      }
-    </script>
+<div class="divide">
+<style type="text/css">
+    .divide {
+      margin: 30px;
+      padding: 24px 0;
+    }
+  </style>
+
+  <form>
+    1st Number : <input type="text"
+    id="firstNumber" /><br>
+    2nd Number: <input type="text" 
+    id="secondNumber" /><br>
+    <input type="button" onClick="divideBy()" 
+     Value="Divide" />
+  </form>
+  
+  <p>O resultado é: <br>
+    <span id = "result"></span>
+  </p>
+  
+  <script>
+    function divideBy() 
+    { 
+      num1 = document.getElementById(
+        "firstNumber").value;
+      num2 = document.getElementById(
+        "secondNumber").value;
+      document.getElementById(
+        "result").innerHTML = num1 / num2;
+    }
+  </script>
   </div>
 
 
