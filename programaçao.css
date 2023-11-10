@@ -252,7 +252,7 @@ input[type=submit]{
     padding: .2em;
     overflow-wrap: break-word;
   }
-  
+
   #previous-operation {
     color: #aaaae9;
   }
@@ -260,4 +260,9 @@ input[type=submit]{
   #current-operation{
     font-size: 3em;
     font-weight: 700;
+  }
+
+  #buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
