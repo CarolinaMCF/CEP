@@ -254,7 +254,7 @@ input[type=submit]{
   }
 
   #previous-operation {
-    color: #aaaae9;
+    color: #9e9ee6;
   }
 
   #current-operation{
@@ -275,4 +275,13 @@ input[type=submit]{
     font-size: 1.2em;
     background-color: #f7f7fd;
     cursor: pointer;
+  }
+
+  #buttons-container .number{
+    background-color: #fbfbfd;
+  }
+
+  #buttons-container button:hover{
+    background-color: #ececf8;
+    border-color: #aaaae9;
   }
