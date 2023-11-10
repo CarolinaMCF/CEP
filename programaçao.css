@@ -245,3 +245,19 @@ input[type=submit]{
   #operations {
     text-align: right;
   }
+
+  #previous-operation, 
+  #current-operation{
+    min-height: 1.6em;
+    padding: .2em;
+    overflow-wrap: break-word;
+  }
+  
+  #previous-operation {
+    color: #aaaae9;
+  }
+
+  #current-operation{
+    font-size: 3em;
+    font-weight: 700;
+  }
