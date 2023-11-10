@@ -273,7 +273,7 @@ input[type=submit]{
     border-radius: 0;
     height: 4em;
     font-size: 1.2em;
-    background-color: #ececfa;
+    background-color: #f1f1fd;
     cursor: pointer;
   }
 
@@ -284,4 +284,9 @@ input[type=submit]{
   #buttons-container button:hover{
     background-color: #ececf8;
     border-color: #aaaae9;
+  }
+
+  #buttons-container #equal-btn{
+    grid-column: span 2;
+    background-color: rgb(185, 203, 252);
   }
