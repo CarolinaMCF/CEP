@@ -175,27 +175,14 @@
   
   <div class="calculadora">
    <h1>Calculadora</h1>
-   Primeiro Número<br />
-   <input id="n1" type="number"/><br />
-   Segundo Número<br />
-   <input id="n2" type="number" /><br />
-   <button onclick="somar()">Somar</button>
-   <button>Subtrair</button>
-   <button>Multiplicar</button>
-   <button>Dividir</button>
-   <br /><br />
-   O resultado é <span></span>
-
-   <script>
-        var n1 = document.querySelector('#n1');
-        var n2 = document.querySelector('#n2');
-        var resultado = document.querySelector('span');
-
-        function somar(){
-            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value);
-        }
-   </script>
-  </div>
+   <p id="resultado"></p>
+   <table>
+    <tr>
+        <td><button>C</button></td>
+    </tr>
+   </table>
+</div>
+   
 
 
 
