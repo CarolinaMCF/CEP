@@ -43,9 +43,19 @@ class Calculator{
 
   // Add digit to calculator screen
   addDigit(digit){
+    // Check if current operation already has a dot
+    if(digit === "." && this.currentOperationText.innerText.includes(".")){
+      return;
+    }
     this.currentOperation = digit;
     this.updateScreen();
   }
+
+  // Process all calculator operations
+  processOperation(operation){
+    // parei aqui!
+  }
+  
   // Change values of the calculator screen
   updateScreen(){
     this.currentOperationText.innerText += this.currentOperation;
@@ -61,7 +71,7 @@ buttons.forEach((btn) => {
     if(+value >= 0 || value === "."){
         calc.addDigit(value);
     }else{
-       console.log("Op: " + value);
+       calc.processOperation(value);
     }
   });
 });
