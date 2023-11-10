@@ -218,4 +218,11 @@ input[type=submit]{
     font-family:sans-serif;
   }
   
-  
+  .calc {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+  }
