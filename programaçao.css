@@ -290,3 +290,8 @@ input[type=submit]{
     grid-column: span 2;
     background-color: rgb(185, 203, 252);
   }
+
+  #buttons-container #equal-btn:hover{
+    grid-column: span 2;
+    background-color: rgb(168, 190, 252);
+  }
