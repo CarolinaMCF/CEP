@@ -265,4 +265,5 @@ input[type=submit]{
   #buttons-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
   }
