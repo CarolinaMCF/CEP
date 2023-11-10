@@ -219,6 +219,7 @@ input[type=submit]{
   }
   
   .calculadora {
+    padding: 24px 0; 
     position: absolute;
     background-color: #E6E6FA;
   }
