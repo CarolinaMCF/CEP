@@ -218,4 +218,7 @@ input[type=submit]{
     font-family:sans-serif;
   }
   
-  
+  .calculadora {
+    position: absolute;
+    background-color: #E6E6FA;
+  }
