@@ -226,3 +226,12 @@ input[type=submit]{
     justify-content: center;
     padding: 3em;
   }
+
+  #calc{
+    width: 400px;
+    padding: .5em;
+    backgroud-color: #E6E6FA;
+    color: black;
+    display: flex;
+    flex-direction: column;
+  }
