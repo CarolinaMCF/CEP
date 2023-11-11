@@ -240,7 +240,7 @@ input[type=submit]{
   #calc h3{
     font-size: .8em;
     font-weight: 300;
-    color: #9191d4;
+    color: #7e7ecf;
   }
 
   #operations {
@@ -255,7 +255,7 @@ input[type=submit]{
   }
 
   #previous-operation {
-    color: #9e9ee6;
+    color: #7e7ecf;
   }
 
   #current-operation{
