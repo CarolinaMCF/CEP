@@ -53,11 +53,31 @@ class Calculator{
 
   // Process all calculator operations
   processOperation(operation){
-    
+    // Get current and previous value
+    let operationValue;
+    const previous = +this.previousOperationText.innerText;
+    const current = +this.currentOperationText.innerText; 
+
+    switch(operation){
+      case "+":
+          operationValue = previous + current;
+          this.updateScreen(operationValue, operation, current, previous);
+        break;
+      default:
+        return;
+
+    }
   }
   
   // Change values of the calculator screen
-  updateScreen(){
+  updateScreen(
+    operationValue = null, 
+    operation = null, 
+    current = null, 
+    previous = null
+  ){
+    console.log(operationValue, operation, current, previous);
+
     this.currentOperationText.innerText += this.currentOperation;
   }
 }
