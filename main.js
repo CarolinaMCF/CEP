@@ -177,4 +177,5 @@ buttons.forEach((btn) => {
        calc.processOperation(value);
     }
   });
+  // teste
 });
