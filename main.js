@@ -1,3 +1,4 @@
+// Teclado
 function tocar (idElementoAudio) {
     document.querySelector(idElementoAudio).play();
 }
@@ -30,9 +31,10 @@ for (let Contador = 0; Contador < lista.length; Contador++){
     }
 }
 
-const previousOperationText = document.querySelector('#previous-operation');
-const currentOperationText = document.querySelector('#current-operation');
-const buttons = document.querySelectorAll('#buttons-container button');
+// Calculadora
+const previousOperationText = document.querySelector("#previous-operation");
+const currentOperationText = document.querySelector("#current-operation");
+const buttons = document.querySelectorAll("#buttons-container button");
 
 class Calculator{
   constructor(previousOperationText, currentOperationText){
@@ -53,16 +55,50 @@ class Calculator{
 
   // Process all calculator operations
   processOperation(operation){
+    // Check if current is empty
+    if(this.currentOperationText.innerText === "" && operation !== "C"){
+      // Change operation
+      if(this.previousOperationText.innerText !== ""){
+        this.changeOperation(operation);
+      }
+      return;
+    }
+
+
     // Get current and previous value
     let operationValue;
-    const previous = +this.previousOperationText.innerText;
+    const previous = +this.previousOperationText.innerText.split(" ")[0];
     const current = +this.currentOperationText.innerText; 
 
     switch(operation){
-      case "+":
+       case"+":
           operationValue = previous + current;
           this.updateScreen(operationValue, operation, current, previous);
         break;
+        case"-":
+          operationValue = previous - current;
+          this.updateScreen(operationValue, operation, current, previous);
+        break;
+        case"/":
+          operationValue = previous / current;
+          this.updateScreen(operationValue, operation, current, previous);
+        break;
+        case"*":
+          operationValue = previous * current;
+          this.updateScreen(operationValue, operation, current, previous);
+        break;
+        case"DEL":
+        this.processDelOperator();
+      break;
+      case"CE":
+        this.processClearCurrentOperation();
+      break;
+      case"C":
+        this.processClearAllOperation();
+      break;
+      case"=":
+        this.processEqualOperator();
+      break;
       default:
         return;
 
@@ -76,10 +112,57 @@ class Calculator{
     current = null, 
     previous = null
   ){
-    console.log(operationValue, operation, current, previous);
+    
+    if(operationValue === null){
+      this.currentOperationText.innerText += this.currentOperation;
+    } else {
+      // Check if value is 0, if it is just add current value
+      if(previous === 0){
+        operationValue = current;
+      }
 
-    this.currentOperationText.innerText += this.currentOperation;
+      // Add current value to previous
+      this.previousOperationText.innerText = `${operationValue} ${operation}`
+      this.currentOperationText.innerText = "";
+    }
   }
+  // Change math operation
+  changeOperation(operation){
+
+    const mathOperations = ["*", "/", "+", "-"];
+
+    if(!mathOperations.includes(operation)){
+      return;
+    }
+
+    this.previousOperationText.innerText = 
+      this.previousOperationText.innerText.slice(0, -1) + operation;
+  }
+
+  // Delete the last digit
+  processDelOperator(){
+    this.currentOperationText.innerText = 
+      this.currentOperationText.innerText.slice(0, -1);
+  }
+
+  // Clear current operation
+  processClearCurrentOperation(){
+    this.currentOperationText.innerText = "";
+  }
+
+  // Clear all operations
+  processClearAllOperation(){
+    this.currentOperationText.innerText = "";
+    this.previousOperationText.innerText = "";
+  }
+
+  // Process an operation
+  processEqualOperator(){
+    const operation = previousOperationText.innerText.split(" ")[1];
+
+    this.processOperation(operation);
+  }
+
 }
 
 const calc = new Calculator(previousOperationText, currentOperationText);
