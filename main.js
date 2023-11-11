@@ -53,7 +53,7 @@ class Calculator{
 
   // Process all calculator operations
   processOperation(operation){
-    // parei aqui!
+    
   }
   
   // Change values of the calculator screen
